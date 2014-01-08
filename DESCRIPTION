@@ -1,0 +1,17 @@
+Package: managelocalrepo
+Type: Package
+Title: Manage CRAN-like repo on local network
+Version: 0.1
+Date: 2014-01-08
+Author: Imanuel Costigan <i.costigan@me.com>
+Maintainer: Imanuel Costigan <i.costigan@me.com>
+Description: This package will allow easier maintainence of CRAN-like repos on
+    local networks (i.e. not on CRAN). This might be necessary where hosted
+    packages contain intellectual property owned by a corporation.
+License: GPL (>= 2)
+Depends:
+    R (>= 3.0)
+Imports:
+    stringr (>= 0.6.2),
+    assertthat (>= 0.1),
+    tools (>= 3.0)

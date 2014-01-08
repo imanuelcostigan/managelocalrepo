@@ -1,0 +1,6 @@
+export(quick_release_package)
+export(release_package)
+importFrom(assertthat,assert_that)
+importFrom(stringr,str_sub)
+importFrom(tools,file_ext)
+importFrom(tools,write_PACKAGES)
