@@ -138,7 +138,7 @@ check_package_file_name <- function (package_location, type)
 
 release_package <- function (package_location, repo_base, 
                              type='win', version='all', 
-                             r_versions = c('2.15', '3.0'), ...) 
+                             r_versions = c('2.15', '3.0', '3.1'), ...) 
 {
   # Check validity of pkg file ext against what is expected in R-admin
   check_package_file_name(package_location, type)
