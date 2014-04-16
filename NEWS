@@ -1,3 +1,7 @@
+# managelocalrepo 0.1.1
+
+- UPDATE: added '3.1' to the `r_versions` argument in `release_package()`
+
 # managelocalrepo 0.1
 
 - Initial release
