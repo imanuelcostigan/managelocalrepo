@@ -5,6 +5,13 @@ networks (i.e. not on CRAN). This might be necessary where hosted packages
 contain intellectual property owned by a corporation that cannot be hosted 
 publicly.
 
+## Installation
+
+This will hopefully make it to CRAN. However, in the interim:
+
+```R
+devtools::install_github("imanuelcostigan/managelocalrepo")
+```
 
 ## Process
 
@@ -15,7 +22,7 @@ files should be put before being released to your local repo.
    to your `.First()` file in your `.Rprofile`. For example, your `.Rprofile` 
    might look something like this:
 
-   ```
+   ```R
    .First <- function () 
    {
        options( 
@@ -24,6 +31,7 @@ files should be put before being released to your local repo.
          managelocalrepo.base = '/path/to/your/dir')
    }
   ```
+  
   The `repos` option will make sure you can install from the corporate repo. 
   The other two options will help point `managelocalrepo` to where it might
   find the package file (e.g. `zip`, `tgz` file) when you use 
@@ -35,5 +43,5 @@ the `submissions` folder and then run
 
 ## Notes
 
-I've tested this on Windows. But hopefully it should work on Mac and other 
+I've tested this on Windows and OSX. But hopefully it should work on other 
 platforms.
