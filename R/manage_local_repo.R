@@ -8,9 +8,6 @@
 #' @docType package
 #' @name managelocalrepo
 #' @aliases managelocalrepo package-managelocalrepo
-#' @importFrom stringr str_sub
-#' @importFrom assertthat assert_that
-#' @importFrom tools file_ext write_PACKAGES
 NULL
 
 ###############################################################################
@@ -51,7 +48,7 @@ full_repo_dir <- function (repo_base, version, type="win", ...)
     tree <- file.path("bin", "windows", "contrib", version, ...)
   } else if (type == 'mac') {
     tree <- file.path("bin", "macosx")
-    version_major_point <- as.numeric(str_sub(version, end=1))
+    version_major_point <- as.numeric(stringr::str_sub(version, end=1))
     if (version_major_point < 3)
       tree <- file.path(tree, "leopard")
     tree <- file.path(tree, "contrib", version, ...)
@@ -92,10 +89,11 @@ create_terminal_dir <- function (repo_base, version, type="win", ...)
 
 check_package_file_name <- function (package_location, type) 
 {
-  pkg_file_ext <- file_ext(package_location)
-  assert_that(any(all(type == 'src', pkg_file_ext %in% c('gz', 'bz2', 'xz')),
-                  all(type == 'win', pkg_file_ext == 'zip'),
-                  all(type == 'mac', pkg_file_ext == 'tgz')))
+  pkg_file_ext <- tools::file_ext(package_location)
+  assertthat::assert_that(any(
+    all(type == 'src', pkg_file_ext %in% c('gz', 'bz2', 'xz')),
+    all(type == 'win', pkg_file_ext == 'zip'),
+    all(type == 'mac', pkg_file_ext == 'tgz')))
 }
 
 ###############################################################################
@@ -164,7 +162,7 @@ release_package <- function (package_location, repo_base,
          from=package_location, recursive=TRUE, copy.mode=TRUE)
   
   # Update the package indices
-  lapply(X=repo_trees, FUN=write_PACKAGES)
+  lapply(X=repo_trees, FUN=tools::write_PACKAGES)
   
   # Return NULL invisibly to avoid write_PACKAGES
   invisible(NULL)
