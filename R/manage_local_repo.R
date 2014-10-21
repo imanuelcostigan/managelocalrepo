@@ -162,7 +162,11 @@ release_package <- function (package_location, repo_base,
          from=package_location, recursive=TRUE, copy.mode=TRUE)
   
   # Update the package indices
-  lapply(X=repo_trees, FUN=tools::write_PACKAGES)
+  type <- switch(type, 
+    win = "win.binary", 
+    mac = "mac.binary",
+    src = "source")
+  lapply(X=repo_trees, FUN=tools::write_PACKAGES, type = type)
   
   # Return NULL invisibly to avoid write_PACKAGES
   invisible(NULL)
