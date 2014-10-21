@@ -143,7 +143,7 @@ release_package <- function (package_location, repo_base,
   
   # Determine repo trees to populate (i.e. the terminal directories)
   if (type == 'src')
-    repo_trees <- full_repo_dir(repo_base, type, ...)
+    repo_trees <- full_repo_dir(repo_base, version, type, ...)
   else if (version == 'all')
     repo_trees <- sapply(X=r_versions, FUN=full_repo_dir, 
                          repo_base=repo_base, type=type)
