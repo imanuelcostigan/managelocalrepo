@@ -1,3 +1,7 @@
+# 0.1.4
+
+- Changes to DESCRIPTION file following feedback provided by Prof. Ripley.
+
 # 0.1.3
 
 - Fixed call write_PACKAGE() from release_package() which wasn't passing through type parameter which was necessary when on Windows and writing a source package.
