@@ -2,10 +2,10 @@ Package: managelocalrepo
 Type: Package
 Title: Manage a CRAN-style Local Repository
 Version: 0.1.4
-Date: 2014-10-23
+Date: 2014-10-25
 Author: Imanuel Costigan <i.costigan@me.com>
 Maintainer: Imanuel Costigan <i.costigan@me.com>
-Description: This will allow easier maintanence of a CRAN-style repository on
+Description: This will allow easier management of a CRAN-style repository on
     local networks (i.e. not on CRAN). This might be necessary where hosted
     packages contain intellectual property owned by a corporation.
 License: GPL-2
