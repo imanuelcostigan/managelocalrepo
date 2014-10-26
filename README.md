@@ -7,10 +7,10 @@ publicly.
 
 ## Installation
 
-This will hopefully make it to CRAN. However, in the interim:
+Easy:
 
 ```R
-devtools::install_github("imanuelcostigan/managelocalrepo")
+install.packages("managelocalrepo")
 ```
 
 ## Process
