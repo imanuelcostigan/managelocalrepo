@@ -35,11 +35,11 @@ files should be put before being released to your local repo.
   The `repos` option will make sure you can install from the corporate repo. 
   The other two options will help point `managelocalrepo` to where it might
   find the package file (e.g. `zip`, `tgz` file) when you use 
-  `quick_package_release()`.
+  `quick_release_package()`.
 
 Then you can build package file (e.g. `package_file.zip`), have them copied to
 the `submissions` folder and then run
-`quick_package_release('package_file.zip')`.
+`quick_release_package('package_file.zip')`.
 
 ## Notes
 
