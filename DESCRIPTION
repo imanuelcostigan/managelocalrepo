@@ -1,6 +1,6 @@
 Package: managelocalrepo
 Type: Package
-Title: Manage a CRAN-style Local Repository
+Title: Manage a CRAN-Style Local Repository
 Version: 0.1.5
 Date: 2015-04-21
 Author: Imanuel Costigan <i.costigan@me.com>
