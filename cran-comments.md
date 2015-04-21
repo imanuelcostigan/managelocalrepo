@@ -1,1 +1,1 @@
-Removed use of "maintenance" in DESCRIPTION. Too difficult to maintain.
+Manage packages for R 3.2
