@@ -1,3 +1,7 @@
+# 0.1.5
+
+- Added '3.2' to 'r_versions' argument in `release_package()`
+
 # 0.1.4
 
 - Changes to DESCRIPTION file following feedback provided by Prof. Ripley.
